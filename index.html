@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>CW Inspo — Landing Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+            <!-- Top bar with left-aligned logo (full-width white background) -->
+            <div class="topbar">
+                <div class="topbar-inner">
+                    <a href="/">
+                        <img src="img/cw_logo-2.png" alt="CW Inspo logo" class="logo">
+                    </a>
+                    <div class="topbar-actions">
+                      <a href="#donate" class="btn btn-accent topbar-donate">Donate</a>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+            <!-- HERO: big visual, headline, short supporting text, and two CTAs -->
+            <header class="hero" role="banner">
+            <div class="hero-inner">
+                <h1 class="hero-title"><span class="hero-title-large">Start the Ripple</span><br>That Restores the Planet</h1>
+                <p class="hero-sub">Bring clean, sustainable water to communities and watch your impact flow across people, places, and the planet.</p>
+                <!-- CTA form: email input on the left, subscribe button submits the form. Donate removed from hero. -->
+                <form class="cta-group" style="margin-top:16px;" action="#" method="post">
+                    <input type="email" class="email-input" name="email" placeholder="Your email" aria-label="Email address" required>
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </header>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+        <main id="story" style="padding: 0 20px; max-width: 1000px; margin: 36px auto;">
+            <!-- Story section: image + text side-by-side on wide screens, stacked on small screens -->
+            <section class="story" aria-labelledby="story-heading">
+                <img src="img/cwfamilyimage.png" alt="Community members celebrating by a new water pump" class="story-image">
+                <div class="story-content">
+                    <h2 id="story-heading">How one well placed ripple makes space for opportunity</h2>
+                    <p class="muted">In many places, collecting water takes hours each day. That time comes from school, work, and rest.</p>
+                    <p>charity: water transforms not only landscapes but lives by bringing clean, sustainable water to communities. Every donation creates a ripple effect, funding real projects while restoring environments and empowering local leaders to build thriving networks of change.</p>
+                </div>
+            </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
-</body>
+            <!-- Donation block: simple and prominent -->
+            <section id="donate" class="donation" aria-labelledby="donate-heading">
+                <h2 id="donate-heading">Donate today — provide clean water</h2>
+                <p class="muted">Even a small donation helps fund materials, labor, and training for a new well.</p>
+                <a href="#" class="btn btn-accent">Donate Now</a>
+            </section>
+        </main>
+
+        <footer class="site-footer" role="contentinfo">
+            <p class="muted">© <span id="year">2025</span> charity: water</p>
+        </footer>
+    </body>
 </html>
